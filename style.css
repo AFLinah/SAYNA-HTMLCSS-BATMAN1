@@ -11,6 +11,9 @@
     --yellow-light: #f8f184;
     --blue-color: #19587d;
     --white-color: #ffffff;
+    --gradient-white:#eddebf67;
+    --gradient-red: #89000978;
+    --black-color: #000;
 }
 
 h1{
@@ -33,7 +36,7 @@ button{
 body{
     background-color: black;
     color: white;
-    font-family: 'Space-Grotesk';
+    font-family: 'Space Grotesk';
     font-weight: 300;
 }
 
@@ -64,18 +67,109 @@ nav ul a:hover{
     background-image: url(Assets/Illustrations/Bathome1.png);
     background-size: cover;
     height: 800px;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
-/* Style pour la section batman personnage */
-.batman-personnage{
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+#hero .title{
+    margin: 20px 0;
+}
+
+.btn{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 40px;
+    margin-top: 10px;
+    background: linear-gradient(
+        80deg,var(--gradient-white) ,var(--gradient-red)
+    );
+    box-shadow: var(--black-color) 5px 5px 60px;
+}
+
+#hero .arrow{
+    display: block;
+    margin: 0 auto;
+    margin-top: 285px;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 80px;
+    top: 220px;
+}
+
+.scroll img{
+    margin-top: 15px;
+}
+
+/* Style pour les cartes de personnage */
+
+#batman-cinema, #nemesis, #allies, #justice-league, #multimedia{
+    margin-top: 40px;
+}
+
+.title{
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.text{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+    font-size: 21px;
+}
+
+.personnage{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    padding: 20px;
 }
 
-#justice-league{
+.personnage-info{
+    text-align: center;
+}
+
+/* Style pour la section justice league */
+.img-justice-league{
     background-image: url("Assets/Illustrations/Bathome11.png" );
     background-size: cover;
     height: 800px;
+}
+
+/* Style pour la section multimedia */
+#multimedia .slider-multimedia{
+    display: flex;
+    width: 60%;
+    margin: 40px auto;
+}
+
+#multimedia .slider-img{
+    width: 100%;
+}
+
+#multimedia .slider-content{
+    padding: 15px;
+    background-color: #727272;
+}
+
+#multimedia p{
+    font-size: 14px;
+}
+
+#multimedia p .yellow-text{
+    color: var(--yellow-color);
 }
