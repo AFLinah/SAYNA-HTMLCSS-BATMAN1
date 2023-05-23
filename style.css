@@ -1,3 +1,81 @@
-img{
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow-color: #FFFF00;
+    --yellow-light: #f8f184;
+    --blue-color: #19587d;
+    --white-color: #ffffff;
+}
+
+h1{
+    font-family: 'Rajdhani';
+    font-size: 36px;
+    font-weight: 400;
+}
+
+button{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+body{
     background-color: black;
+    color: white;
+    font-family: 'Space-Grotesk';
+    font-weight: 300;
+}
+
+/* Style pour la navigation */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+ul{
+    list-style: none;   
+}
+
+nav ul a{
+    color: var(--white-color);
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'rajdhani';
+}
+nav ul a:hover{
+    color: var(--yellow-color);
+}
+
+/* Style pour la partie en-tete hero */
+#hero{
+    background-image: url(Assets/Illustrations/Bathome1.png);
+    background-size: cover;
+    height: 800px;
+}
+
+/* Style pour la section batman personnage */
+.batman-personnage{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+
+#justice-league{
+    background-image: url("Assets/Illustrations/Bathome11.png" );
+    background-size: cover;
+    height: 800px;
 }
