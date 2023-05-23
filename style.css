@@ -12,8 +12,11 @@
     --blue-color: #19587d;
     --white-color: #ffffff;
     --gradient-white:#eddebf67;
-    --gradient-red: #89000978;
-    --black-color: #000;
+    --gradient-red: #B11313;
+    --black-color: #000000;
+    --gradient-grey: #C4C4C4;
+    --gradient-black: #0D0E09;
+    --light-grey: #c4c4c4;
 }
 
 h1{
@@ -69,6 +72,7 @@ nav ul a:hover{
     height: 800px;
     background-repeat: no-repeat;
     background-position: top center;
+    background-color: #19587d;
 }
 
 .content{
@@ -141,6 +145,7 @@ nav ul a:hover{
 
 .personnage-info{
     text-align: center;
+    padding: 15px;
 }
 
 /* Style pour la section justice league */
@@ -151,6 +156,17 @@ nav ul a:hover{
 }
 
 /* Style pour la section multimedia */
+#multimedia button{
+    position: relative;
+    top: 160px;
+    background: none;
+    border: none;
+}
+
+#multimedia button.right{
+    right: -85%;
+}
+
 #multimedia .slider-multimedia{
     display: flex;
     width: 60%;
@@ -163,7 +179,11 @@ nav ul a:hover{
 
 #multimedia .slider-content{
     padding: 15px;
-    background-color: #727272;
+    background: linear-gradient(
+        120deg,var(--gradient-white) ,var(--gradient-black)
+    );
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #multimedia p{
@@ -172,4 +192,136 @@ nav ul a:hover{
 
 #multimedia p .yellow-text{
     color: var(--yellow-color);
+}
+
+/* Style pour la section Contact et formulaire */
+#contact{
+    background: linear-gradient(
+        120deg,var(--gradient-white) ,var(--gradient-black)
+    );
+    padding: 20px 0;
+    margin: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+#contact .form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#contact .title{
+    display: block;
+    margin: 20px 0;
+}
+
+#contact .form input[type='email'], textarea{
+    display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 90%;
+    border-bottom: 2px solid var(--light-grey);
+    background-color: transparent;
+}
+
+#contact .form .grey{
+    color: var(--light-grey);
+    font-size: 15px;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+#contact .news{
+    color: var(--light-grey);
+    font-size: 15px;
+    margin: 15px 0;
+    border-bottom: 2px solid var(--light-grey);
+    width: 90%;
+}
+
+#contact .icon img{
+    transform: rotate(90deg);
+    width: 20px;
+    margin-top: 10px;
+}
+
+::placeholder{
+    color: var(--light-grey);
+    font-size: 15px;
+}
+
+#contact .btn-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact .form input[type='radio']{
+    opacity: 0;
+}
+
+#contact .form .btn-group label{
+    cursor: pointer;
+    border: 2px solid;
+    padding: 10px;
+    border-image: linear-gradient(
+        120deg,var(--gradient-grey) ,var(--blue-color)
+    ) 1;
+    font-size: 15px;
+}
+
+#contact .form input[type='submit']{
+    display: block;
+    width: 150px;
+    margin: 25px auto;
+    padding: 15px 0;
+    cursor: pointer;
+    background: linear-gradient(
+        100deg,var(--gradient-white) ,var(--gradient-red)
+    );
+}
+
+#citation{
+    margin: 90px;
+}
+
+#citation .citation-item{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#citation .citation-auteur{
+    padding-top: 30px;
+    font-size: 12px;
+    font-family: 'rajdhani';
+}
+
+#citation .guillemet-close{
+    float: right;
+}
+
+/* Style pour le footer */
+footer{
+    margin-top: 150px;
+}
+
+footer .text-footer{
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .social-footer{
+    text-align: center;
+    margin: 40px 0;
+}
+
+footer .social-item{
+    padding: 10px;
 }
